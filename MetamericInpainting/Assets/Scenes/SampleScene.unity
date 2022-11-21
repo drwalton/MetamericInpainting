@@ -301,6 +301,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1104229918210919010, guid: 34a252c76cc1ad9459c24804f292645b, type: 3}
+      propertyPath: nWarpFrames
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104229918210919010, guid: 34a252c76cc1ad9459c24804f292645b, type: 3}
       propertyPath: analysisCameraCommandBuffers
       value: 
       objectReference: {fileID: 328746761}
@@ -316,6 +320,18 @@ PrefabInstance:
       propertyPath: pyramidGO
       value: 
       objectReference: {fileID: 328746765}
+    - target: {fileID: 4118875603108749432, guid: 34a252c76cc1ad9459c24804f292645b, type: 3}
+      propertyPath: m_Depth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541306472971971186, guid: 34a252c76cc1ad9459c24804f292645b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5655765835086219532, guid: 34a252c76cc1ad9459c24804f292645b, type: 3}
+      propertyPath: pyramidDepth
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5655765835086219532, guid: 34a252c76cc1ad9459c24804f292645b, type: 3}
       propertyPath: warpFrameSource
       value: 
@@ -390,6 +406,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7491333286268666838, guid: 34a252c76cc1ad9459c24804f292645b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8889022229645707422, guid: 34a252c76cc1ad9459c24804f292645b, type: 3}
+      propertyPath: pre_filter
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8889022229645707422, guid: 34a252c76cc1ad9459c24804f292645b, type: 3}
+      propertyPath: preLoadNoise
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8889022229645707422, guid: 34a252c76cc1ad9459c24804f292645b, type: 3}
+      propertyPath: pyramidDepth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8889022229645707422, guid: 34a252c76cc1ad9459c24804f292645b, type: 3}
+      propertyPath: screenDoorRemoval
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

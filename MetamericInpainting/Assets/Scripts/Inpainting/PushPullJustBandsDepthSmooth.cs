@@ -251,14 +251,20 @@ public class PushPullJustBandsDepthSmooth : PushPullJustBands
     {
         if(displayTexture == 0)
         {
+            if (index > m_meanPyramids.Length - 1)
+                index = m_meanPyramids.Length - 1;
             return m_meanPyramids[index];
         }
         else if(displayTexture == 1)
         {
+            if (index > m_sdevPyramids.Length - 1)
+                index = m_sdevPyramids.Length - 1;
             return m_sdevPyramids[index];
         }
         else
         {
+            if (index > m_validityTextures.Length - 1)
+                index = m_validityTextures.Length - 1;
             return m_validityTextures[index];
         }
     }
