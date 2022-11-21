@@ -185,7 +185,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2972652552293917100}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 47c4bd716fa52c04a825d021d4d16eeb, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: ccf70fdecbba4f840ad875529a32a91c, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 2972652552293917102}
@@ -309,7 +309,7 @@ MonoBehaviour:
   PPColors: {fileID: 2972652552429730786}
   equiMode: 0
   screenDoorRemoval: 1
-  pyramidDepth: 0
+  pyramidDepth: 5
   weightLevels: 0
   m_finalResult: {fileID: 0}
 --- !u!1 &2972652552429730787
@@ -434,8 +434,8 @@ MonoBehaviour:
   videoLoader: {fileID: 2972652552288310326}
   saveSingleWarpedFrame: 0
   saveAllFrames: 0
-  warpTransform: {fileID: 0}
-  depthScale: 0
+  warpTransform: {fileID: 2972652553892839015}
+  depthScale: 1
   translationMultiple: 5
   vrMode: 0
 --- !u!114 &2972652552429730799
@@ -613,7 +613,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2972652553814861940}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: dbff99c53a5024f43868f82625b2b2cc, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 451a96c35aae02f4c9e6887d39bdce14, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 2972652553814861942}
