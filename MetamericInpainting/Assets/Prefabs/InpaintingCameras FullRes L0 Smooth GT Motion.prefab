@@ -84,17 +84,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 464950773548342371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d97edc0cd8f6eba4686f67d4a47ca304, type: 3}
+  m_Script: {fileID: 11500000, guid: e1f1ba29c981f7f43af81575b2a9eeb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hiq: 0
   pre_filter: 0
   preLoadNoise: 0
-  warpFrameSource: {fileID: 8209501732402340809}
+  warpFrameSource: {fileID: 4576446650276874646}
   bands: {fileID: 2312426157133665942}
+  sceneCamera: {fileID: 4576446650276874646}
+  warpTransform: {fileID: 0}
   stats: {fileID: 3368933899142430299}
   warpGO: {fileID: 2452712763269929461}
   PPColors: {fileID: 3368933899142430298}
+  equiMode: 0
+  screenDoorRemoval: 1
   pyramidDepth: 5
   weightLevels: 0
   m_finalResult: {fileID: 0}
@@ -187,7 +191,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3368933899142430301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36309ff1b50bb24297a17493c69212f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7895dfb626127324b8ea03420f3c3fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pyramidDepth: 5
@@ -196,7 +200,7 @@ MonoBehaviour:
   - {fileID: 2312426157133665942}
   - {fileID: 3368933899142430299}
   - {fileID: 3368933899142430298}
-  warpFrameSource: {fileID: 8209501732402340809}
+  warpFrameSource: {fileID: 4576446650276874646}
 --- !u!114 &2452712763269929461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,15 +210,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 3368933899142430301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad362b1b8f27bb849b6cd59b9e909240, type: 3}
+  m_Script: {fileID: 11500000, guid: abe6a102b400da24b9d0b290e030d5c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_WarpedImage: {fileID: 0}
   m_WarpedAlphas: {fileID: 0}
-  clearColor: {r: 1, g: 0, b: 0, a: 0}
+  m_InpaintedMotion: {fileID: 0}
+  clearColor: {r: 0, g: 0, b: 0, a: 0}
   triangleValidThreshold: 0.01
-  targetFrameRate: 0
-  warpFrameSource: {fileID: 8209501732402340809}
+  targetFrameRate: 10
+  warpFrameSource: {fileID: 4576446650276874646}
   saveSingleWarpedFrame: 0
   saveAllFrames: 0
   linearWarp: 0
@@ -227,17 +232,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 3368933899142430301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 605baab392d68304b9e22d71f4ad6a52, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3d34ef7c29af84fa3696fbe3f5fcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lod: 0
-  displayMode: 5
-  showStep: 2
+  displayMode: 0
+  showStep: 0
   showTexture: 0
   pointSample: 0
   transformRect: 0
   saveAllBands: 0
   squaredForSave: 0
+  frameSource: {fileID: 4576446650276874646}
 --- !u!114 &2312426157133665942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +253,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3368933899142430301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cb0cc6248c5c9346a67809ec49793e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 3933833f32686f54ea40662ebc0c6825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hiq: 0
@@ -264,15 +270,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3368933899142430301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cf5ea9d3c3496147b045935ad99cd4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d1e3bf3d10498f448490f2c4b0995d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   warpGO: {fileID: 2452712763269929461}
   showTexture: 0
   threshold: 0.04
   m_validity: {fileID: 0}
-  do2x2: 1
-  validityPow: 0.5
+  do2x2: 0
+  validityPow: 1
   skipPull: 0
 --- !u!114 &3368933899142430299
 MonoBehaviour:
@@ -283,16 +289,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 3368933899142430301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc4fa35c8509d774c8161cd45d918d97, type: 3}
+  m_Script: {fileID: 11500000, guid: f700a62067b51a241a498b839dc13855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pyramidGO: {fileID: 2312426157133665942}
   displayTexture: 0
   m_validityTextures: []
   threshold: 0.04
-  smoothInpaint: 0
-  validityPow: 0
-  do2x2: 1
+  smoothInpaint: 1
+  validityPow: 1
+  do2x2: 0
   skipPull: 0
 --- !u!1 &6824617717915312928
 GameObject:
@@ -303,7 +309,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6344751457919999819}
-  - component: {fileID: 6824617717915312934}
   m_Layer: 0
   m_Name: InpaintingCameras FullRes L0 Smooth GT Motion
   m_TagString: Untagged
@@ -328,21 +333,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6824617717915312934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6824617717915312928}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dc8a8917a0c6496fbf8aaa5f85901d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.7
-  direction: {x: 1, y: 0, z: 0}
-  motionTime: 7
 --- !u!1 &8209501732402340814
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +344,7 @@ GameObject:
   - component: {fileID: 1449055346550480883}
   - component: {fileID: 1255259023547174296}
   - component: {fileID: 358232512289756479}
-  - component: {fileID: 8209501732402340809}
+  - component: {fileID: 4576446650276874646}
   m_Layer: 0
   m_Name: SceneCamera
   m_TagString: MainCamera
@@ -427,7 +417,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8209501732402340814}
   m_Enabled: 1
---- !u!114 &8209501732402340809
+--- !u!114 &4576446650276874646
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -436,7 +426,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8209501732402340814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61df527c56f0cfa4bb80b0eb0f8e9fae, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b3e9aaa67116c846a92b242960748f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   color: {fileID: 0}
@@ -446,4 +436,5 @@ MonoBehaviour:
   nWarpFrames: 10
   analysisCameraCommandBuffers: {fileID: 8180449200156628369}
   targetFramerate: 10
+  motionMultiple: 1
   tmpMotion: {fileID: 0}

@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pyramidDepth: 5
   commands: []
-  warpFrameSource: {fileID: 0}
+  warpFrameSource: {fileID: 1104229918210919010}
 --- !u!114 &2157878947493791080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a046b8d8b8fe5499c07225b98acfc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpGO: {fileID: 0}
+  warpGO: {fileID: 2157878947493791080}
   showTexture: 0
   do2x2: 0
 --- !u!114 &1241658360152711878
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1e3bf3d10498f448490f2c4b0995d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpGO: {fileID: 0}
+  warpGO: {fileID: 2157878947493791080}
   showTexture: 0
   threshold: 0.04
   m_validity: {fileID: 0}
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f700a62067b51a241a498b839dc13855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pyramidGO: {fileID: 0}
+  pyramidGO: {fileID: 2300487758544243211}
   displayTexture: 0
   m_validityTextures: []
   threshold: 0.04
@@ -415,7 +415,7 @@ MonoBehaviour:
   motion: {fileID: 0}
   stereoPreviewMode: 0
   nWarpFrames: 10
-  analysisCameraCommandBuffers: {fileID: 0}
+  analysisCameraCommandBuffers: {fileID: 5655765835086219532}
   targetFramerate: 0
 --- !u!95 &7744925515549508698
 Animator:
