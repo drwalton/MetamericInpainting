@@ -30,3 +30,9 @@ Their demo is available on Github here: https://github.com/ana-serrano/VR-6dof, 
 For this demo only the colour and depth videos are required (e.g. `cafeteria.mp4` and `cafeteria_depth.mp4`). These files can be added to the project (e.g. in `Assets/Videos` and then linked to the `VideoPlayer`s in the `Color` and `Depth` GameObjects in the `InpaintingCamerasEquiVideoSmooth` prefab.
 
 Once everything is set up, the warp can again be controlled by moving the `WarpTransform` `GameObject`.
+
+### Attribution
+
+The 3D Garden scene used in the examples included here was created by [Shahriar Shahrabi @ Sketchfab](https://sketchfab.com/shahriyarshahrabi).
+
+[Link to original scene](https://sketchfab.com/3d-models/an-afternoon-in-a-persian-garden-b13afbaf1aae4f6aad03aaa081ce471e).
