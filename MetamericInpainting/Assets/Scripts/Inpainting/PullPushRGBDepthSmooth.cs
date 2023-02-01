@@ -133,7 +133,7 @@ public class PullPushRGBDepthSmooth : PullPushRGB
     public bool do2x2 = true;
 
     [Range(1e-6f, 10.0f)]
-    public float validityPow = 1.0f;
+    public float validityPow = 0.5f;
 
     public bool skipPull = false;
 
