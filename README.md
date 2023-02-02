@@ -31,6 +31,26 @@ For this demo only the colour and depth videos are required (e.g. `cafeteria.mp4
 
 Once everything is set up, the warp can again be controlled by moving the `WarpTransform` `GameObject`.
 
+## Prefabs
+
+We include a number of `InpaintingCameras` prefabs which can be used to perform the tasks in the example scenes above.
+
+These all include an `AnalysisCamera` that applies warping, constructs the steerable pyramid and inpaints, and a `SynthesisCamera` that generates the final output based on the inpainted colours and stats maps.
+
+The `Motion`, `Stereo` and `Transform` prefabs also include a `SceneCamera` responsible for rendering the initial input colour and depth images of the 3D scene. When setting this up in a new 3D scene, note that setting correct clipping planes is important to get the best results - try to move the near plane as far away as possible whilst avoiding clipping, and keep the far plane as close as possible. This will improve depth precision and give better results from the warping and inpainting.
+
+The `Stereo`, `Transform` and `360 Video` prefabs include a `WarpTransform` object that sets the transformation used when warping. In the case of `Stereo` this is the offset between the two eye views. For `Transform` it is the warping transform applied to the input image. Finally, for `360 Video` it is the viewpoint the 360 video is rendered from.
+
+The `SynthesisCamera` produces the final output image, so generally its `Depth` value should be set to be higher than the other cameras in the scene.
+
+### Viewer
+
+The `AnalysisCamera` includes a `Viewer` script that lets you see intermediate steps of the approach. To use it, set the `Depth` value for the `AnalysisCamera` to be higher than the other cameras in the scene. You can then use the sliders to control which step of the approach is displayed, change the display mode etc.
+
+The `Show Step` slider selects which stage of the approach to display (these correspond to the steps in `CameraCommandBuffers`)
+
+When showing the steerable pyramid bands we recommend changing the display mode to 1 or 2. The `Show Texture` slider can be used to select which orientation is displayed.
+
 ### Attribution
 
 The 3D Garden scene used in the examples included here was created by [Shahriar Shahrabi @ Sketchfab](https://sketchfab.com/shahriyarshahrabi).
