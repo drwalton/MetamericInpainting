@@ -1,5 +1,5 @@
 # MetamericInpainting
-Code implementing the method from "Metameric Inpainting for Image Warping", TVCG 2022 [\[Paper\]](https://drwalton.github.io/papers/Metameric_Inpainting_for_Image_Warping.pdf) | [\[Video\]](https://vimeo.com/772790447)
+Code implementing the method from "Metameric Inpainting for Image Warping", TVCG 2022 [\[Paper\]](https://ieeexplore.ieee.org/document/9928218) | [\[Video\]](https://vimeo.com/772790447)
 
 This contains the code implementing the algorithm, and some example scenes showing applications for our approach. The approach is implemented in Unity, and was tested in version 2020.3.19f1. For the smoothest experience we'd recommend installing this version of Unity, which is available [in the download archive](https://unity3d.com/get-unity/download/archive). It's probably compatible with other versions, but you may need to re-import. 
 To note, this project should use the "Gamma" option for color correction - if this is changed to "Linear" after re-importing you may get weird inpainted results. For best results please also ensure AA is disabled.
