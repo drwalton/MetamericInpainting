@@ -53,6 +53,18 @@ The `Show Step` slider selects which stage of the approach to display (these cor
 
 When showing the steerable pyramid bands we recommend changing the display mode to 1 or 2. The `Show Texture` slider can be used to select which orientation is displayed.
 
+### Getting More Scenes
+
+To limit the size of this repository, only one of the 3D scenes from the paper has been included. However the others (and many more scenes) are available on Sketchfab. For a complete list of the scenes used in the paper please see the Credits list on our [paper webpage](https://drwalton.github.io/metameric_inpainting_page/).
+
+The sketchfab plugin is available [here](https://github.com/sketchfab/unity-plugin/releases). This is a standard `unitypackage` file that can be imported via Assets->Import Package->Custom Package in unity. To import the models I recommend downloading from Sketchfab in `.gltf` format and using SketchFab->Import GLTF in Unity to import them.
+
+To download from SketchFab you will need to create an account. Please note that models on SketchFab have a variety of Creative Commons licenses and ensure that the license is appropriate for your use case. You can filter by license type in the search engine.
+
+When importing make sure to change the prefab name to match the scene imported to avoid confusion later. Also I would recommend changing the "Import Into" location to a separate directory for each imported scene. By default all assets are imported into `Assets/Import` and if two different scenes have a texture with the same filename they *will* overwrite one another. Keeping them separate also makes deleting scenes later much easier.
+
+Just to note, there is a [newer plugin developed by Zoe](https://sketchfab.com/blogs/community/new-sketchfab-plugin-for-unity-allows-model-download-at-runtime/) but I have not personally tested it yet.
+
 ### Attribution
 
 The 3D Garden scene used in the examples included here was created by [Shahriar Shahrabi @ Sketchfab](https://sketchfab.com/shahriyarshahrabi).
