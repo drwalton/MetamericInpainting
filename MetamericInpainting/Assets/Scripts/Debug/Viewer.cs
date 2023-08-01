@@ -7,7 +7,7 @@ public class Viewer: MonoBehaviour
     [Range(0, 16)]
     public float lod = 0;
 
-    [Range(0,10)]
+    [Range(0,11)]
     public int displayMode = 0;
 
     [Range(0, 5)]

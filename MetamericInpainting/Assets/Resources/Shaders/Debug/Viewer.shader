@@ -124,6 +124,7 @@ Shader "Hidden/Viewer"
                 res.a += 0.5;
             }
             float alpha = (res.a - 0.5) * 2.0;
+            alpha = sqrt(alpha);
             return float4(alpha, alpha, alpha, 1);
         }
         if (_DisplayMode == 9 || _DisplayMode == 10) { // Show motion
@@ -154,7 +155,16 @@ Shader "Hidden/Viewer"
                 res.rgb = float3(1, 1, 1) * length(color.xyz) * 0.5f;
                 res.r += length(motion.xy) * 300;
             }
+        }        
+        if (_DisplayMode == 11) { //Show depths
+            if (res.a < 0.5) {
+                return checkerboard(input.uv, 40, 40);
+            }
+            float alpha = (res.a - 0.5) * 2.0;
+            alpha = sqrt(alpha);
+            return float4(alpha, alpha, alpha, 1);
         }
+
  
 
 		return res;
